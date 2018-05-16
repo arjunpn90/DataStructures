@@ -1,0 +1,6 @@
+C:\Users\Arjun's PC\Desktop\Sample_C#_Projects\DataStructures\DataStructures\QueueUsingStack\bin\Debug\QueueUsingStack.exe.config
+C:\Users\Arjun's PC\Desktop\Sample_C#_Projects\DataStructures\DataStructures\QueueUsingStack\bin\Debug\QueueUsingStack.exe
+C:\Users\Arjun's PC\Desktop\Sample_C#_Projects\DataStructures\DataStructures\QueueUsingStack\bin\Debug\QueueUsingStack.pdb
+C:\Users\Arjun's PC\Desktop\Sample_C#_Projects\DataStructures\DataStructures\QueueUsingStack\obj\Debug\QueueUsingStack.csproj.CoreCompileInputs.cache
+C:\Users\Arjun's PC\Desktop\Sample_C#_Projects\DataStructures\DataStructures\QueueUsingStack\obj\Debug\QueueUsingStack.exe
+C:\Users\Arjun's PC\Desktop\Sample_C#_Projects\DataStructures\DataStructures\QueueUsingStack\obj\Debug\QueueUsingStack.pdb
