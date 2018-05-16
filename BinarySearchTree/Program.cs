@@ -13,11 +13,11 @@ namespace BST
             BinarySearchTree tree = new BinarySearchTree();
 
             /* Let us create following BST
-                  50
-               /     \
-              30      70
-             /  \    /  \
-           20   40  60   80 */
+                      50
+                   /     \
+                  30      70
+                 /  \    /  \
+               20   40  60   80 */
 
             tree.Insert(50);
             tree.Insert(30);
@@ -54,11 +54,21 @@ namespace BST
             root = null;
         }
 
+        /// <summary>
+        /// Insert exposed method
+        /// </summary>
+        /// <param name="key"></param>
         public void Insert(int key)
         {
             root = InsertRecord(root, key);
         }
 
+        /// <summary>
+        /// Insert Recursive call
+        /// </summary>
+        /// <param name="root"></param>
+        /// <param name="key"></param>
+        /// <returns></returns>
         private Node InsertRecord(Node root, int key)
         {
             if (root == null)
@@ -78,6 +88,9 @@ namespace BST
             return root;
         }
 
+        /// <summary>
+        /// Tree Traversal - Inorder
+        /// </summary>
         public void Inorder()
         {
             InorderTraversal(root);
@@ -85,6 +98,10 @@ namespace BST
             PrintRoot();
         }
 
+        /// <summary>
+        /// Inorder - Recursive function
+        /// </summary>
+        /// <param name="root"></param>
         void InorderTraversal(Node root)
         {
             if (root != null)
@@ -95,12 +112,22 @@ namespace BST
             }
         }
 
+        /// <summary>
+        /// Delete exposed method
+        /// </summary>
+        /// <param name="key"></param>
         public void Delete(int key)
         {
             Console.WriteLine("Going to delete : {0}", key);
             DeleteRecord(root, key);
         }
 
+        /// <summary>
+        /// Delete a node in BST
+        /// </summary>
+        /// <param name="root"></param>
+        /// <param name="key"></param>
+        /// <returns></returns>
         private Node DeleteRecord(Node root, int key)
         {
             if (root == null)
@@ -130,29 +157,46 @@ namespace BST
             return root;
         }
 
-        private int FindSuccessor(Node right)
+        /// <summary>
+        /// Find inorder successor of the node.
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        private int FindSuccessor(Node root)
         {
-            int minValue = right.data;
+            int minValue = root.data;
 
-            while(right.Left != null)
+            while(root.Left != null)
             {
-                minValue = right.Left.data;
-                right = right.Left;
+                minValue = root.Left.data;
+                root = root.Left;
             }
 
             return minValue;
         }
 
+        /// <summary>
+        /// Print Root of BST
+        /// </summary>
         public void PrintRoot()
         {
             Console.WriteLine("Root : {0}", root.data);            
         }
 
+        /// <summary>
+        /// Fetch tree height
+        /// </summary>
+        /// <returns></returns>
         public int getTreeHeight()
         {
             return GetHeight(root);
         }
 
+        /// <summary>
+        /// Recursive function to get tree height
+        /// </summary>
+        /// <param name="head"></param>
+        /// <returns></returns>
         int GetHeight(Node head)
         {
             if (head == null)
@@ -167,6 +211,10 @@ namespace BST
                 return rh;
         }
 
+        /// <summary>
+        /// Checks if tree is balanced tree or not
+        /// </summary>
+        /// <returns></returns>
         public bool IsBalancedTree()
         {
             if (GetHeightDifference(root) > 1)
@@ -175,6 +223,11 @@ namespace BST
             return true;
         }
 
+        /// <summary>
+        /// Calculates the tree height different
+        /// </summary>
+        /// <param name="head"></param>
+        /// <returns></returns>
         int GetHeightDifference(Node head)
         {
             if (head == null)
@@ -185,9 +238,43 @@ namespace BST
 
             return Math.Abs(lh - rh);
         }
+
+        /// <summary>
+        /// Checks if the tree is Sum Tree or not
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        public bool IsSumTree(Node root)
+        {
+            //Leaf nodes are sum tree by default
+            if (root == null || (root.Left == null && root.Right == null))
+                return true;
+
+            int ls, rs;
+
+            ls = Sum(root.Left);
+            rs = Sum(root.Right);
+
+            if ((root.data == ls + rs) && IsSumTree(root.Left) && IsSumTree(root.Right))
+                return true;
+
+            return true;
+        }
+
+        /// <summary>
+        /// Calculate Sum of tree - Recursive function
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        int Sum(Node root)
+        {
+            if (root == null)
+                return 0;
+            return root.data + Sum(root.Left) + Sum(root.Right);
+        }
     }
 
-    class Node
+    public class Node
     {
         public int data;
         public Node Left, Right;
