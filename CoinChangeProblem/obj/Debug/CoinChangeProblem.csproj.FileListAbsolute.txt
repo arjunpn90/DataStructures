@@ -1,0 +1,7 @@
+A:\Workspace\DataStructures\CoinChangeProblem\bin\Debug\CoinChangeProblem.exe.config
+A:\Workspace\DataStructures\CoinChangeProblem\bin\Debug\CoinChangeProblem.exe
+A:\Workspace\DataStructures\CoinChangeProblem\bin\Debug\CoinChangeProblem.pdb
+A:\Workspace\DataStructures\CoinChangeProblem\obj\Debug\CoinChangeProblem.csprojResolveAssemblyReference.cache
+A:\Workspace\DataStructures\CoinChangeProblem\obj\Debug\CoinChangeProblem.csproj.CoreCompileInputs.cache
+A:\Workspace\DataStructures\CoinChangeProblem\obj\Debug\CoinChangeProblem.exe
+A:\Workspace\DataStructures\CoinChangeProblem\obj\Debug\CoinChangeProblem.pdb
