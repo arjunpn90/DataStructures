@@ -8,35 +8,67 @@ namespace CoinChangeProblem
 {
     class Program
     {
+        static int[] coins = { 1, 2, 3 };
+
         static void Main(string[] args)
         {
             int n = 4;
-
-            int[] coins = { 1, 2, 3 };
-            Console.WriteLine(MakeChange(coins, n));
+            //Console.WriteLine(GetCoinsRecursion(n));
+            Console.WriteLine(GetCountDynamicProgramming(n));
         }
 
-        public static long MakeChange(int[] coins, int money)
+        /// <summary>
+        /// Helper method to call recursive method
+        /// </summary>
+        /// <param name="money"></param>
+        /// <returns></returns>
+        public static int GetCoinsRecursion(int money)
         {
-            return MakeChange(coins, money, 0);
+            return GetCoinsRecursion(money, 0);
         }
 
-        public static long MakeChange(int[] coins, int money, int index)
+        /// <summary>
+        /// Get the combination of coins using recursion
+        /// </summary>
+        /// <param name="money"></param>
+        /// <param name="currentCoin"></param>
+        /// <returns></returns>
+        public static int GetCoinsRecursion(int money, int currentCoin)
         {
-            if (index >= coins.Length)
-                return 0;
             if (money == 0)
                 return 1;
 
-            int amountWithCoins = 0;
-            long ways = 0;
-            while (amountWithCoins <= money)
+            if (money < 0)
+                return 0;
+
+            int ways = 0;
+            for (int coin=currentCoin; coin < coins.Length; coin++)
             {
-                int remainingMoney = money - amountWithCoins;                
-                ways += MakeChange(coins, remainingMoney, index + 1);
-                amountWithCoins += coins[index];
+                ways += GetCoinsRecursion(money - coins[coin], coin);
             }
             return ways;
+        }
+        
+        /// <summary>
+        /// Get coin denominations using Dynamic Programming
+        /// </summary>
+        /// <param name="money"></param>
+        /// <returns></returns>
+        public static int GetCountDynamicProgramming(int money)
+        {
+            int[] combination = new int[money + 1];
+            combination[0] = 1;
+
+            foreach (int coin in coins)
+            {
+                for (int amount=1; amount <combination.Length; amount++)
+                {                                            
+                    if (amount >= coin)
+                        combination[amount] += combination[amount - coin];
+                }
+            }
+
+            return combination[money];
         }
     }
 }
