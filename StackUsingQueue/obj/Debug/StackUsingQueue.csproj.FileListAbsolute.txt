@@ -5,3 +5,9 @@ C:\Users\Arjun's PC\Desktop\Sample_C#_Projects\DataStructures\DataStructures\Sta
 C:\Users\Arjun's PC\Desktop\Sample_C#_Projects\DataStructures\DataStructures\StackUsingQueue\obj\Debug\StackUsingQueue.csproj.CoreCompileInputs.cache
 C:\Users\Arjun's PC\Desktop\Sample_C#_Projects\DataStructures\DataStructures\StackUsingQueue\obj\Debug\StackUsingQueue.exe
 C:\Users\Arjun's PC\Desktop\Sample_C#_Projects\DataStructures\DataStructures\StackUsingQueue\obj\Debug\StackUsingQueue.pdb
+A:\Workspace\DataStructures\StackUsingQueue\bin\Debug\StackUsingQueue.exe.config
+A:\Workspace\DataStructures\StackUsingQueue\bin\Debug\StackUsingQueue.exe
+A:\Workspace\DataStructures\StackUsingQueue\bin\Debug\StackUsingQueue.pdb
+A:\Workspace\DataStructures\StackUsingQueue\obj\Debug\StackUsingQueue.csproj.CoreCompileInputs.cache
+A:\Workspace\DataStructures\StackUsingQueue\obj\Debug\StackUsingQueue.exe
+A:\Workspace\DataStructures\StackUsingQueue\obj\Debug\StackUsingQueue.pdb

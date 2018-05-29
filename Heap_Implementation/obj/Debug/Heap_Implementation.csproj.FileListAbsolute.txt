@@ -5,3 +5,9 @@ C:\Users\Arjun's PC\Desktop\Sample_C#_Projects\GS_Coderpad_Practice\Heap_Impleme
 C:\Users\Arjun's PC\Desktop\Sample_C#_Projects\GS_Coderpad_Practice\Heap_Implementation\obj\Debug\Heap_Implementation.exe
 C:\Users\Arjun's PC\Desktop\Sample_C#_Projects\GS_Coderpad_Practice\Heap_Implementation\obj\Debug\Heap_Implementation.pdb
 C:\Users\Arjun's PC\Desktop\Sample_C#_Projects\GS_Coderpad_Practice\Heap_Implementation\obj\Debug\Heap_Implementation.csprojResolveAssemblyReference.cache
+A:\Workspace\DataStructures\Heap_Implementation\bin\Debug\Heap_Implementation.exe.config
+A:\Workspace\DataStructures\Heap_Implementation\bin\Debug\Heap_Implementation.exe
+A:\Workspace\DataStructures\Heap_Implementation\bin\Debug\Heap_Implementation.pdb
+A:\Workspace\DataStructures\Heap_Implementation\obj\Debug\Heap_Implementation.csproj.CoreCompileInputs.cache
+A:\Workspace\DataStructures\Heap_Implementation\obj\Debug\Heap_Implementation.exe
+A:\Workspace\DataStructures\Heap_Implementation\obj\Debug\Heap_Implementation.pdb

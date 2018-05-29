@@ -5,3 +5,9 @@ C:\Users\Arjun's PC\Desktop\Sample_C#_Projects\Interview_Prepare\BinarySearchTre
 C:\Users\Arjun's PC\Desktop\Sample_C#_Projects\Interview_Prepare\BinarySearchTree\obj\Debug\BinarySearchTree.csproj.CoreCompileInputs.cache
 C:\Users\Arjun's PC\Desktop\Sample_C#_Projects\Interview_Prepare\BinarySearchTree\obj\Debug\BinarySearchTree.exe
 C:\Users\Arjun's PC\Desktop\Sample_C#_Projects\Interview_Prepare\BinarySearchTree\obj\Debug\BinarySearchTree.pdb
+A:\Workspace\DataStructures\BinarySearchTree\bin\Debug\BinarySearchTree.exe.config
+A:\Workspace\DataStructures\BinarySearchTree\bin\Debug\BinarySearchTree.exe
+A:\Workspace\DataStructures\BinarySearchTree\bin\Debug\BinarySearchTree.pdb
+A:\Workspace\DataStructures\BinarySearchTree\obj\Debug\BinarySearchTree.csproj.CoreCompileInputs.cache
+A:\Workspace\DataStructures\BinarySearchTree\obj\Debug\BinarySearchTree.exe
+A:\Workspace\DataStructures\BinarySearchTree\obj\Debug\BinarySearchTree.pdb

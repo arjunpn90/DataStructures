@@ -66,26 +66,26 @@ namespace BST
         /// <summary>
         /// Insert Recursive call
         /// </summary>
-        /// <param name="root"></param>
+        /// <param name="node"></param>
         /// <param name="key"></param>
         /// <returns></returns>
-        private Node InsertRecord(Node root, int key)
+        private Node InsertRecord(Node node, int key)
         {
-            if (root == null)
+            if (node == null)
             {
                 return new Node(key);
             }
 
-            if (root.data > key)
+            if (node.data > key)
             {
-                root.Left = InsertRecord(root.Left, key);
+                node.Left = InsertRecord(node.Left, key);
             }
             else
             {
-                root.Right = InsertRecord(root.Right, key);
+                node.Right = InsertRecord(node.Right, key);
             }
 
-            return root;
+            return node;
         }
 
         /// <summary>
@@ -125,36 +125,36 @@ namespace BST
         /// <summary>
         /// Delete a node in BST
         /// </summary>
-        /// <param name="root"></param>
+        /// <param name="node"></param>
         /// <param name="key"></param>
         /// <returns></returns>
-        private Node DeleteRecord(Node root, int key)
+        private Node DeleteRecord(Node node, int key)
         {
-            if (root == null)
+            if (node == null)
             {
                 return null;
             }
 
-            if (root.data > key)
+            if (node.data > key)
             {
-                root.Left = DeleteRecord(root.Left, key);
+                node.Left = DeleteRecord(node.Left, key);
             }
-            else if (root.data < key)
+            else if (node.data < key)
             {
-                root.Right = DeleteRecord(root.Right, key);
+                node.Right = DeleteRecord(node.Right, key);
             }
             else
             {
-                if (root.Right == null)
-                    return root.Left;
-                else if (root.Left == null)
-                    return root.Right;
+                if (node.Right == null)
+                    return node.Left;
+                else if (node.Left == null)
+                    return node.Right;
 
                 //Find the inorder successor
-                root.data = FindSuccessor(root.Right);
-                root.Right = DeleteRecord(root.Right, root.data);
+                node.data = FindSuccessor(node.Right);
+                node.Right = DeleteRecord(node.Right, node.data);
             }
-            return root;
+            return node;
         }
 
         /// <summary>
@@ -242,20 +242,20 @@ namespace BST
         /// <summary>
         /// Checks if the tree is Sum Tree or not
         /// </summary>
-        /// <param name="root"></param>
+        /// <param name="node"></param>
         /// <returns></returns>
-        public bool IsSumTree(Node root)
+        public bool IsSumTree(Node node)
         {
             //Leaf nodes are sum tree by default
-            if (root == null || (root.Left == null && root.Right == null))
+            if (node == null || (node.Left == null && node.Right == null))
                 return true;
 
             int ls, rs;
 
-            ls = Sum(root.Left);
-            rs = Sum(root.Right);
+            ls = Sum(node.Left);
+            rs = Sum(node.Right);
 
-            if ((root.data == ls + rs) && IsSumTree(root.Left) && IsSumTree(root.Right))
+            if ((node.data == ls + rs) && IsSumTree(node.Left) && IsSumTree(node.Right))
                 return true;
 
             return true;
@@ -271,7 +271,7 @@ namespace BST
             if (root == null)
                 return 0;
             return root.data + Sum(root.Left) + Sum(root.Right);
-        }
+        }   
     }
 
     public class Node
